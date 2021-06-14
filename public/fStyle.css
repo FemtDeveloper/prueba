@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+}
+main {
+  margin: 0 auto;
+  background-color: #f0f2f5;
+  max-width: 1080px;
+  align-content: center;
+}
+.container-face {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #f0f2f5;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f0f2f5;
+  min-height: 560px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.title-container {
+  padding: 30px 0;
+  text-align: center;
+  width: 420px;
+}
+.title-container__inside {
+  /* width: 50%; */
+  margin: 0 auto;
+}
+.title-container__inside h2 {
+  font-size: 1.4rem;
+}
+.title-container__inside img {
+  width: 320px;
+}
+.right-container {
+  width: 100%;
+  max-width: 440px;
+}
+.form-container {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  margin: 0 auto;
+  height: auto;
+  width: 90%;
+  max-width: 440px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, red, blue) 10;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inputs {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.input-form {
+  height: 2.8rem;
+  margin: 5px 0;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: lavender 1.5px solid;
+  width: 100%;
+}
+.form__paragraph {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.account-btn {
+  background-color: #42b72a;
+  border-color: #42b72a;
+  color: #fff;
+  border-radius: 5px;
+  align-self: center;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  vertical-align: middle;
+  padding: 4px;
+}
+.language-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  align-items: center;
+}
+img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+.welcome-title {
+  margin: 50px auto;
+  background-color: tomato;
+  border-radius: 10px;
+  text-align: center;
+  color: #f0f2f5;
+  width: fit-content;
+  padding: 5px 30px;
+  align-self: center;
+}
+.no-matches {
+  border: 3px solid red;
+  color: red;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+}
