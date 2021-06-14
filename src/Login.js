@@ -1,20 +1,25 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import PropTypes from 'prop-types'
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const LoginForm = ({ Login, error }) => {
-  const [person, setPerson] = useState({ name: "", lastName: "" });
+  const [person, setPerson] = useState({ name: null, lastName: null });
   const handlerSubmit = (e) => {
     e.preventDefault();
     Login(person);
     setPerson({ name: "", lastName: "" });
   };
-  useEffect(() => {}, []);
+
+  const handleChange = ({ target }) => {
+    const {value, id} = target;
+  setPerson( (state) => ({ ...state, [id]: value }))
+  }
 
   return (
     <div className="right-container">
-      {error !== "" ? <h1 className="no-matches">No matches</h1> : ""}
+      {error ? <h1 className="no-matches">No matches</h1> : ""}
       <div className="form-container">
         <form>
           <div className="inputs">
@@ -24,7 +29,7 @@ const LoginForm = ({ Login, error }) => {
               placeholder="First Name"
               name="name"
               id="name"
-              onChange={(e) => setPerson({ ...person, name: e.target.value })}
+              onChange={handleChange}
             />
             <input
               className="input-form"
@@ -33,7 +38,7 @@ const LoginForm = ({ Login, error }) => {
               name="lastName"
               id="lastName"
               onChange={(e) =>
-                setPerson({ ...person, lastName: e.target.value })
+                setPerson(handleChange )
               }
             />
           </div>
@@ -55,5 +60,10 @@ const LoginForm = ({ Login, error }) => {
     </div>
   );
 };
+
+LoginForm.propTypes = {
+  LoginForm: PropTypes.func,
+  error: PropTypes.bool
+}
 
 export default LoginForm;
